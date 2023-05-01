@@ -7,7 +7,6 @@ class MovieListSerilizer(serializers.ModelSerializer):
         fields=("title", "tagline", "category")
 
 class MovieDetailSerilizer(serializers.ModelSerializer):
-
     category = serializers.SlugRelatedField(slug_field="name", read_only=True)
     directors = serializers.SlugRelatedField(slug_field="name", read_only=True, many=True)
     actors = serializers.SlugRelatedField(slug_field="name", read_only=True, many=True)
