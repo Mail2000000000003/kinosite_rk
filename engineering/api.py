@@ -14,7 +14,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
     }
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
-    serializer_class = MovieDetailSerilizer
+    serializer_class = MovieListSerilizer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = {
         'id': ['exact'],

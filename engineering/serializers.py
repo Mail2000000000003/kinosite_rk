@@ -4,7 +4,7 @@ from .models import Movie, Reviews, Category, Actor, Genre
 class MovieListSerilizer(serializers.ModelSerializer):
     class Meta:
         model=Movie
-        fields=("title", "tagline", "category")
+        fields=("title", "tagline", "category", "poster", "year", "country")
 
 class MovieDetailSerilizer(serializers.ModelSerializer):
     category = serializers.SlugRelatedField(slug_field="name", read_only=True)
