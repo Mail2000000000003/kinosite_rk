@@ -3,9 +3,10 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.views.generic.base import View
 from django.db.models import Q
 from django.http import JsonResponse, HttpResponse
-
 from .models import Movie, Category , Actor, Genre, Rating
 from .forms import ReviewForm, RatingForm
+
+
 
 class GenreYear:
     def get_genres(self):

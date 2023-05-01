@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.9"
 djangorestframework = "^3.14.0"
 django-allauth = "^0.54.0"
+pillow = "^9.5.0"
 
 
 [build-system]

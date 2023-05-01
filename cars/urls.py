@@ -16,16 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from engineering import views
+from engineering import RestViews
 from django.conf import settings
 from django.conf.urls.static import static
 
-# router.register(r'Compositions', views.CompositionViewSet)
+# router=routers.DefaultRouter()
+# router.register(r'movies', RestViews.MoviesListView, basename='movies')
+
 
 urlpatterns = [
-
     path('admin/', admin.site.urls),
-    path("", include("engineering.urls")),
+    path("home/", include("engineering.urls")),
     path('accounts/', include('allauth.urls')),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
